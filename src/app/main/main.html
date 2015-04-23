@@ -1,0 +1,25 @@
+<div layout="column" layout-margin layout-fill>
+  <div id="header" ng-include="'/app/components/header/header.html'"></div>
+  <div id="content">
+    <md-content>
+      <md-tabs md-selected="data.selectedIndex" md-align-tabs="{{data.bottom ? 'bottom' : 'top'}}">
+        <md-tab id="tab1">
+          <md-tab-label>Grupos</md-tab-label>
+          <md-tab-body>
+            <div layout="row">
+              <md-list class="groups-list" layout="column" flex>
+                <md-list-item class="md-2-line" ng-repeat="group in groups" flex>
+                  <a ng-href="#" class="md-list-item-text" ng-class="md-offset" layout-padding>
+                    <h3> {{ group.title }} </h3>
+                    <p> {{ group.desc }} </p>
+                  </a>
+                </md-list-item>
+              </md-list>
+            </div>
+          </md-tab-body>
+        </md-tab>
+      </md-tabs>
+    </md-content>
+  </div>
+  <div id="footer" ng-include="'/app/components/footer/footer.html'"></div>
+</div>

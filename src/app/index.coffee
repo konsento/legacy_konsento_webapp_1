@@ -7,4 +7,3 @@ angular.module 'konsento', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', '
         controller: "MainCtrl"
 
     $urlRouterProvider.otherwise '/'
-

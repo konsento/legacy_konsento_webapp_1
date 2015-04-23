@@ -1,0 +1,17 @@
+<div layout="column" layout-margin layout-fill>
+  <div id="header" ng-include="'/app/components/header/header.html'"></div>
+  <div id="content">
+    <md-content>
+      <md-tabs md-selected="selectedIndex" md-border-bottom>
+        <md-tab ng-repeat="tab in tabs" label="{{tab.title}}">
+          <div class="demo-tab tab{{$index%4}}" style="padding: 25px; text-align: center;">
+            <div ng-bind="tab.content"></div>
+            <br/>
+            <md-button class="md-primary md-raised" ng-click="removeTab( tab )" ng-disabled="tabs.length <= 1">Remove Tab</md-button>
+          </div>
+        </md-tab>
+      </md-tabs>
+    </md-content>
+  </div>
+  <div id="footer" ng-include="'/app/components/footer/footer.html'"></div>
+</div>

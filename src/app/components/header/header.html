@@ -1,0 +1,30 @@
+<div layout="row">
+  <div flex layout="row" layout-padding layout-align="start center">
+    <div id="logo">
+      <img src="/assets/images/konsento-logo.png" alt="Logo">
+    </div>
+    <div id="title">
+      <span>Konsento</span>
+    </div>
+  </div>
+  <div flex layout="column" layout-padding>
+      <div layout="row">
+        <md-input-container flex="33" offset="33">
+          <label>E-mail</label>
+          <input ng-model="user.email" type="email">
+        </md-input-container>
+        <md-input-container flex="33">
+          <label>Senha</label>
+          <input ng-model="user.password" type="password">
+        </md-input-container>
+      </div>
+      <div layout="row">
+        <div flex="33" offset="33" layout="row">
+          <md-button flex>Entrar</md-button>
+        </div>
+        <div flex="33" layout="row">
+          <md-button flex ng-href="{{googleUrl}}" target="_blank">Cadastre-se</md-button>
+        </div>
+      </div>
+  </div>
+</div>
