@@ -7,6 +7,47 @@ html {
   font-family: 'Maven Pro', serif;
 }
 
+h2.breadcrumbs {
+  a {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  a:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+  .separator {
+    md-icon {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+  a.current {
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+#search-group-holder {
+  margin-top: 28px;
+  input {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  /* do not group these rules */
+  input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  input:-moz-placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  input:-ms-input-placeholder { /* IE10+ */
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+md-tabs.md-default-theme {
+  md-ink-bar {
+    color: #0D47A1;
+    background: #0D47A1;
+  }
+}
+
 #footer {
   background-color: #00f;
 }

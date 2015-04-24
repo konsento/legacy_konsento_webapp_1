@@ -1,20 +1,6 @@
 <div layout="column" layout-margin layout-fill>
   <div id="header" ng-include="'/app/components/header/header.html'"></div>
   <div id="content">
-    <md-toolbar md-theme="blue" class="">
-      <div class="md-toolbar-tools">
-        <h2 class="md-flex breadcrumbs">
-          <a href="#/">Global</a>
-        </h2>
-        <span flex></span>
-        <md-input-container md-theme="blue" class="md-hue-1" md-no-float id="search-group-holder">
-          <input ng-model="user.address2" placeholder="Buscar">
-        </md-input-container>
-        <md-button class="md-icon-button" aria-label="Search">
-          <md-icon md-svg-icon="search" style="color: white;"></md-icon>
-        </md-button>
-      </div>
-    </md-toolbar>
     <md-content>
       <md-tabs md-selected="data.selectedIndex" md-align-tabs="{{data.bottom ? 'bottom' : 'top'}}">
         <md-tab id="tab1">
@@ -23,7 +9,7 @@
             <div layout="row">
               <md-list class="groups-list" layout="column" flex>
                 <md-list-item class="md-2-line" ng-repeat="group in groups" flex>
-                  <a ng-href="#/group" class="md-list-item-text" ng-class="md-offset" layout-padding>
+                  <a ng-href="#" class="md-list-item-text" ng-class="md-offset" layout-padding>
                     <h3> {{ group.title }} </h3>
                     <p> {{ group.desc }} </p>
                   </a>
