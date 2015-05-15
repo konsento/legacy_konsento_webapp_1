@@ -27,8 +27,64 @@ angular.module "konsento"
       }
     ]
 
+    $scope.hot = [
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+    ]
+
+    $scope.rising = [
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+    ]
+
+    $scope.controversial = [
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+    ]
+
+    $scope.top = [
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+      { title: 'Tópico '+Math.floor((Math.random()*99)+1), votes: Math.floor((Math.random()*300)+200), desc: "Lorem ipsum dolor sit amet" }
+    ]
+
     $scope.subgroups = [
-      { title: 'São Paulo', desc: "Discussões sobre assuntos estaduais paulistas" }
-      { title: 'Rio de Janeiro', desc: "Discussões sobre assuntos estaduais cariocas" }
-      { title: 'Minas Gerais', desc: "Discussões sobre assuntos estaduais mineiros" }
+      { title: 'Acre', desc: "Discussões sobre assuntos estaduais" }
+      { title: 'Alagoas', desc: "Discussões sobre assuntos estaduais" }
+      { title: 'Amapá', desc: "Discussões sobre assuntos estaduais" }
+      { title: 'Amazonas', desc: "Discussões sobre assuntos estaduais" }
+      { title: 'Bahia', desc: "Discussões sobre assuntos estaduais" }
+      { title: 'Ceará', desc: "Discussões sobre assuntos estaduais" }
+      { title: 'Distrito Federal', desc: "Discussões sobre assuntos estaduais" }
     ]

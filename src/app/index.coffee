@@ -9,15 +9,15 @@ angular.module 'konsento', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', '
         url: "/group",
         templateUrl: "app/group/group.html",
         controller: "GroupCtrl"
+      .state "userAdd",
+        url: "/join",
+        templateUrl: "app/user/add.html",
+        controller: "UserCtrl"
 
     $urlRouterProvider.otherwise '/'
 
-    $mdThemingProvider.theme('grey')
-      .primaryPalette('grey')
     $mdThemingProvider.theme('blue')
       .primaryPalette('blue')
-    $mdThemingProvider.theme('light-blue')
-      .primaryPalette('light-blue')
 
     $mdIconProvider
       .icon('search', 'bower_components/material-design-icons/action/svg/design/ic_search_48px.svg')

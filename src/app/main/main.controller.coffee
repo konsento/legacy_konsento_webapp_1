@@ -16,3 +16,6 @@ angular.module "konsento"
       { title: 'Rio de Janeiro', desc: "Discussões sobre assuntos estaduais cariocas" }
       { title: 'Minas Gerais', desc: "Discussões sobre assuntos estaduais mineiros" }
     ]
+
+    # $scope.contentHeight = $("#header").height() * 2
+    # alert(angular.element("#header").offsetHeight)

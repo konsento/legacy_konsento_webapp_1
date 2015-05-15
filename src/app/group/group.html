@@ -1,61 +1,126 @@
-<div layout="column" layout-margin layout-fill>
+<div layout="column" id="container" flex>
   <div id="header" ng-include="'/app/components/header/header.html'"></div>
-  <div id="content">
-    <md-toolbar md-theme="blue" class="">
-      <div class="md-toolbar-tools">
-        <h2 class="md-flex breadcrumbs">
-          <a href="#/">Global</a>
-          <span class="separator">
-            <md-icon md-svg-icon="chevron-right"></md-icon>
-          </span>
-          <a href="#" class="current">Brasil</a>
-        </h2>
-        <span flex></span>
-        <md-input-container md-theme="blue" class="md-hue-1" md-no-float id="search-group-holder">
-          <input ng-model="user.address2" placeholder="Buscar">
-        </md-input-container>
-        <md-button class="md-icon-button" aria-label="Search">
-          <md-icon md-svg-icon="search" style="color: white;"></md-icon>
-        </md-button>
-      </div>
-    </md-toolbar>
-    <md-content>
-      <md-tabs md-dynamic-height md-selected="selectedIndex" md-border-bottom id="group-tabs">
-        <md-tab ng-repeat="tab in tabs" label="{{tab.title}}">
-          <md-tab-body>
-            <div layout="row">
-              <md-list class="groups-list" layout="column" flex>
-                <md-list-item class="md-2-line" ng-repeat="topic in tab.topics" flex>
-                  <a ng-href="#/group" class="md-list-item-text" ng-class="md-offset" layout="row">
-                    <div flex="5" layout="column">
-                      <div flex class="votes">{{ topic.votes }}</div>
-                    </div>
-                    <div flex>
-                      <h3> {{ topic.title }} </h3>
-                      <p> {{ topic.desc }} </p>
-                    </div>
-                  </a>
-                </md-list-item>
-              </md-list>
-            </div>
-          </md-tab-body>
-        </md-tab>
-        <md-tab id="subgroups" label="Subgrupos">
-          <md-tab-body>
-            <div layout="row">
-              <md-list class="groups-list" layout="column" flex>
-                <md-list-item class="md-2-line" ng-repeat="subgroup in subgroups" flex>
-                  <a ng-href="#/group" class="md-list-item-text" ng-class="md-offset" layout-padding>
-                    <h3> {{ subgroup.title }} </h3>
-                    <p> {{ subgroup.desc }} </p>
-                  </a>
-                </md-list-item>
-              </md-list>
-            </div>
-          </md-tab-body>
-        </md-tab>
-      </md-tabs>
-    </md-content>
+  <div id="content" flex layout="column">
+    <div flex>
+      <md-toolbar md-theme="blue" class="">
+        <div class="md-toolbar-tools">
+          <h2 class="md-flex breadcrumbs">
+            <a href="#/">Global</a>
+            <span class="separator">
+              <md-icon md-svg-icon="chevron-right"></md-icon>
+            </span>
+            <a href="#" class="current">Brasil</a>
+          </h2>
+          <span flex></span>
+          <md-input-container md-theme="blue" class="md-hue-1" md-no-float id="search-group-holder">
+            <input ng-model="user.address2" placeholder="Buscar">
+          </md-input-container>
+          <md-button class="md-icon-button" aria-label="Search">
+            <md-icon md-svg-icon="search" style="color: white;"></md-icon>
+          </md-button>
+        </div>
+      </md-toolbar>
+      <md-content>
+        <md-tabs md-dynamic-height md-selected="selectedIndex" md-border-bottom id="group-tabs">
+          <!-- Em destaque -->
+          <md-tab id="hot" label="Em destaque">
+            <md-tab-body>
+              <div layout="row">
+                <md-list class="groups-list" layout="column" flex>
+                  <md-list-item class="md-2-line" ng-repeat="topic in hot" flex>
+                    <a ng-href="#/group" class="md-list-item-text" ng-class="md-offset" layout="row">
+                      <div flex="5" layout="column">
+                        <div flex class="votes">{{ topic.votes }}</div>
+                      </div>
+                      <div flex>
+                        <h3> {{ topic.title }} </h3>
+                        <p> {{ topic.desc }} </p>
+                      </div>
+                    </a>
+                  </md-list-item>
+                </md-list>
+              </div>
+            </md-tab-body>
+          </md-tab>
+          <!-- Subindo -->
+          <md-tab id="rising" label="Subindo">
+            <md-tab-body>
+              <div layout="row">
+                <md-list class="groups-list" layout="column" flex>
+                  <md-list-item class="md-2-line" ng-repeat="topic in rising" flex>
+                    <a ng-href="#/group" class="md-list-item-text" ng-class="md-offset" layout="row">
+                      <div flex="5" layout="column">
+                        <div flex class="votes">{{ topic.votes }}</div>
+                      </div>
+                      <div flex>
+                        <h3> {{ topic.title }} </h3>
+                        <p> {{ topic.desc }} </p>
+                      </div>
+                    </a>
+                  </md-list-item>
+                </md-list>
+              </div>
+            </md-tab-body>
+          </md-tab>
+          <!-- Controversos -->
+          <md-tab id="controversial" label="Controversos">
+            <md-tab-body>
+              <div layout="row">
+                <md-list class="groups-list" layout="column" flex>
+                  <md-list-item class="md-2-line" ng-repeat="topic in controversial" flex>
+                    <a ng-href="#/group" class="md-list-item-text" ng-class="md-offset" layout="row">
+                      <div flex="5" layout="column">
+                        <div flex class="votes">{{ topic.votes }}</div>
+                      </div>
+                      <div flex>
+                        <h3> {{ topic.title }} </h3>
+                        <p> {{ topic.desc }} </p>
+                      </div>
+                    </a>
+                  </md-list-item>
+                </md-list>
+              </div>
+            </md-tab-body>
+          </md-tab>
+          <!-- No topo -->
+          <md-tab id="top" label="No topo">
+            <md-tab-body>
+              <div layout="row">
+                <md-list class="groups-list" layout="column" flex>
+                  <md-list-item class="md-2-line" ng-repeat="topic in top" flex>
+                    <a ng-href="#/group" class="md-list-item-text" ng-class="md-offset" layout="row">
+                      <div flex="5" layout="column">
+                        <div flex class="votes">{{ topic.votes }}</div>
+                      </div>
+                      <div flex>
+                        <h3> {{ topic.title }} </h3>
+                        <p> {{ topic.desc }} </p>
+                      </div>
+                    </a>
+                  </md-list-item>
+                </md-list>
+              </div>
+            </md-tab-body>
+          </md-tab>
+          <!-- Subgrupos -->
+          <md-tab id="subgroups" label="Subgrupos">
+            <md-tab-body>
+              <div layout="row">
+                <md-list class="groups-list" layout="column" flex>
+                  <md-list-item class="md-2-line" ng-repeat="subgroup in subgroups" flex>
+                    <a ng-href="#/group" class="md-list-item-text" ng-class="md-offset" layout-padding>
+                      <h3> {{ subgroup.title }} </h3>
+                      <p> {{ subgroup.desc }} </p>
+                    </a>
+                  </md-list-item>
+                </md-list>
+              </div>
+            </md-tab-body>
+          </md-tab>
+          <!-- ---------- -->
+        </md-tabs>
+      </md-content>
+    </div>
+    <div id="footer" ng-include="'/app/components/footer/footer.html'"></div>
   </div>
-  <div id="footer" ng-include="'/app/components/footer/footer.html'"></div>
 </div>

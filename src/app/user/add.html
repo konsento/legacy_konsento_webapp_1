@@ -5,7 +5,7 @@
       <md-toolbar md-theme="blue" class="">
         <div class="md-toolbar-tools">
           <h2 class="md-flex breadcrumbs">
-            <a href="#/">Global</a>
+            <a href="#/join">Cadastrar-se</a>
           </h2>
           <span flex></span>
           <md-input-container md-theme="blue" class="md-hue-1" md-no-float id="search-group-holder">
@@ -17,23 +17,22 @@
         </div>
       </md-toolbar>
       <md-content>
-        <md-tabs md-selected="data.selectedIndex" md-align-tabs="{{data.bottom ? 'bottom' : 'top'}}">
-          <md-tab id="groups">
-            <md-tab-label>Grupos</md-tab-label>
-            <md-tab-body>
-              <div layout="row">
-                <md-list class="groups-list" layout="column" flex>
-                  <md-list-item class="md-2-line" ng-repeat="group in groups" flex>
-                    <a ng-href="#/group" class="md-list-item-text" ng-class="md-offset" layout-padding>
-                      <h3> {{ group.title }} </h3>
-                      <p> {{ group.desc }} </p>
-                    </a>
-                  </md-list-item>
-                </md-list>
-              </div>
-            </md-tab-body>
-          </md-tab>
-        </md-tabs>
+        <div flex layout="row">
+          <div flex="50" offset="25" layout="row">
+            <div flex>
+              <md-input-container flex>
+                <label>E-mail (obrigatório)</label>
+                <input ng-model="user.email" ng-required="true">
+              </md-input-container>
+            </div>
+            <div flex>
+              <md-input-container>
+                <label>Senha</label>
+                <input ng-model="user.password" ng-required="true">
+              </md-input-container>
+            </div>
+          </div>
+        </div>
       </md-content>
     </div>
     <div id="footer" ng-include="'/app/components/footer/footer.html'"></div>

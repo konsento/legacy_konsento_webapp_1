@@ -1,17 +1,4 @@
-body {
-  background: url("/assets/images/bg1.png") top left repeat;
-}
-
 #content {
-  background-color: #0f0;
-  .groups-list md-list-item {
-    a {
-      text-decoration: none;
-    }
-  }
-  .groups-list md-list-item:hover {
-    background-color: rgba(0, 0, 0, 0.15);
-  }
   .votes {
     text-align: center;
     font-size: 20px;
